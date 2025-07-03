@@ -1,0 +1,160 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #0099cc, #004d66);
+  color: white;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+header nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: #00ffff;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+.intro h1 {
+  font-size: 3rem;
+}
+.intro h1 span {
+  color: #00ffff;
+}
+.intro p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* SOSIAL MEDIA */
+.sosial {
+  text-align: center;
+  padding: 50px 20px;
+}
+.sosial h2 {
+  margin-bottom: 20px;
+}
+.sosmed {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.sosmed a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+.sosmed a i {
+  font-size: 1.2rem;
+}
+.wa { background: #25d366; color: white; }
+.ig { background: #e1306c; color: white; }
+.fb { background: #1877f2; color: white; }
+.tt { background: #000000; color: white; }
+.sosmed a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* PORTFOLIO */
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* MODAL ZOOM */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+input[id*="img"]:checked + label + label.modal {
+  display: flex;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .sosmed {
+    flex-direction: column;
+  }
+}
